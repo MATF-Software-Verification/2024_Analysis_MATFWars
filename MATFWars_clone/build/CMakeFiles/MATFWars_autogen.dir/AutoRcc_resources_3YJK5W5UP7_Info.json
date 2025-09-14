@@ -1,0 +1,30 @@
+{
+	"BUILD_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/MATFWars_autogen",
+	"CMAKE_BINARY_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone",
+	"CMAKE_SOURCE_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone",
+	"INCLUDE_DIR" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/MATFWars_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/confetti.png",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/background1.png",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/background2.jpg",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/btn1.jpg",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/settings.png",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/btn2.jpg",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/chat_background.jpg",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/easyFunctionSet.txt",
+		"/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/hardFunctionSet.txt"
+	],
+	"LOCK_FILE" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/MATFWars_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/MATFWars_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/resources/resources.qrc",
+	"VERBOSITY" : 0
+}

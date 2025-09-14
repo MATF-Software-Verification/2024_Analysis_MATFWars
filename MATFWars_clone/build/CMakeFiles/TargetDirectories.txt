@@ -1,0 +1,8 @@
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/MATFWars.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/edit_cache.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/rebuild_cache.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/list_install_components.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/install.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/install/local.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/install/strip.dir
+/home/milica/Desktop/2024_Analysis_MATFWars/MATFWars_clone/build/CMakeFiles/MATFWars_autogen.dir
