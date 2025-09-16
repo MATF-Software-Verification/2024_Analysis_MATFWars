@@ -5,23 +5,24 @@
 #include <QFile>
 #include <QTextStream>
 
-namespace Ui {
+namespace Ui
+{
 class Leaderboard;
 }
 
 class Leaderboard : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit Leaderboard(QWidget *parent = nullptr);
-    ~Leaderboard();
+  explicit Leaderboard (QWidget *parent = nullptr);
+  ~Leaderboard ();
 
 public:
-    void showLeaderboard();
+  void showLeaderboard ();
 
 private:
-    Ui::Leaderboard *ui;
+  Ui::Leaderboard *ui;
 };
 
 #endif // LEADERBOARD_H

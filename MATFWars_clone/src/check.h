@@ -1,39 +1,37 @@
 #ifndef CHECK_H
 #define CHECK_H
 
-#include <QDialog>
 #include "Client.h"
+#include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class Check;
 }
 
 class Check : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit Check(QWidget *parent = nullptr);
-    ~Check();
+  explicit Check (QWidget *parent = nullptr);
+  ~Check ();
 
 signals:
-    void noButtonClicked();
-
+  void noButtonClicked ();
 
 private slots:
-    void on_no_check_button_clicked();
+  void on_no_check_button_clicked ();
 
-    void on_yes_check_button_clicked();
+  void on_yes_check_button_clicked ();
 
 private:
-    Ui::Check *ui;
-    QString yesStyle;
-    QString noStyle;
-
+  Ui::Check *ui;
+  QString yesStyle;
+  QString noStyle;
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
+  bool eventFilter (QObject *watched, QEvent *event) override;
 };
 
 #endif // CHECK_H

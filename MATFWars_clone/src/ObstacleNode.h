@@ -1,28 +1,31 @@
 #ifndef OBSTACLENODE_H
 #define OBSTACLENODE_H
 
-#include <QGraphicsItem>
 #include "Obstacle.h"
+#include <QGraphicsItem>
 
 class Obstacle;
 
 class ObstacleNode : public QGraphicsItem
 {
 public:
-    ObstacleNode(Obstacle* obstacle);
+  ObstacleNode (Obstacle *obstacle);
 
-    QRectF boundingRect() const override;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+  QRectF boundingRect () const override;
+  void paint (QPainter *painter, const QStyleOptionGraphicsItem *option,
+              QWidget *widget) override;
 
-    inline const Obstacle *getObstacle() {
-        return m_obstacleNode;
-    }
+  inline const Obstacle *
+  getObstacle ()
+  {
+    return m_obstacleNode;
+  }
 
-    void setCanvasDiameter(double newCanvasDiameter);
+  void setCanvasDiameter (double newCanvasDiameter);
 
 private:
-    Obstacle * m_obstacleNode;
-    double m_canvasDiameter;
+  Obstacle *m_obstacleNode;
+  double m_canvasDiameter;
 };
 
 #endif // OBSTACLENODE_H

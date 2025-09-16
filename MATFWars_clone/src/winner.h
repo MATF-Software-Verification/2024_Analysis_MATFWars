@@ -4,33 +4,33 @@
 #include <QDialog>
 #include <QGraphicsScene>
 #include <QGraphicsView>
-namespace Ui {
+namespace Ui
+{
 class Winner;
 }
 
 class Winner : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit Winner(QWidget *parent = nullptr);
-    ~Winner();
+  explicit Winner (QWidget *parent = nullptr);
+  ~Winner ();
 
-    QString getWinnerName() const;
-    void setWinnerName(const QString &newWinnerName);
+  QString getWinnerName () const;
+  void setWinnerName (const QString &newWinnerName);
 
 private slots:
-    void on_quit_winner_button_clicked();
+  void on_quit_winner_button_clicked ();
 
 private:
-    Ui::Winner *ui;
-    QString quitStyle;
+  Ui::Winner *ui;
+  QString quitStyle;
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event) override;
+  bool eventFilter (QObject *watched, QEvent *event) override;
 
-    QString winnerName = "";
-
+  QString winnerName = "";
 };
 
 #endif // WINNER_H

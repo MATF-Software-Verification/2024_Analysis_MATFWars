@@ -1,91 +1,99 @@
 #include "Obstacle.h"
 
-Obstacle::Obstacle()
+Obstacle::Obstacle ()
 {
-    m_maxHealth = 1 + QRandomGenerator::global()->bounded(5);
-    m_health = m_maxHealth;
+  m_maxHealth = 1 + QRandomGenerator::global ()->bounded (5);
+  m_health = m_maxHealth;
 }
 
-QPointF Obstacle::center() const
+QPointF
+Obstacle::center () const
 {
-    return m_center;
+  return m_center;
 }
 
-void Obstacle::setCenter(QPointF newCenter)
+void
+Obstacle::setCenter (QPointF newCenter)
 {
-    m_center = newCenter;
+  m_center = newCenter;
 }
 
-float Obstacle::diameter() const
+float
+Obstacle::diameter () const
 {
-    return m_diameter;
+  return m_diameter;
 }
 
-void Obstacle::setDiameter(double newDiameter)
+void
+Obstacle::setDiameter (double newDiameter)
 {
-    m_diameter = newDiameter;
+  m_diameter = newDiameter;
 }
 
-void Obstacle::flipX(){
-    m_center.setX(-m_center.x());
-}
-
-void Obstacle::gotHit()
+void
+Obstacle::flipX ()
 {
-    m_health--;
+  m_center.setX (-m_center.x ());
 }
 
-bool Obstacle::isAlive()
+void
+Obstacle::gotHit ()
 {
-    return m_health > 0;
+  m_health--;
 }
 
-double Obstacle::health() const
+bool
+Obstacle::isAlive ()
 {
-    return m_health;
+  return m_health > 0;
 }
 
-QJsonObject Obstacle::createJson()
+double
+Obstacle::health () const
 {
-    // Add obstacles to the array
-    QJsonObject obstacleObject;
-    obstacleObject["m_diameter"] = m_diameter;
-    obstacleObject["m_center"] = QJsonObject{
-        {"x", m_center.x()},
-        {"y", m_center.y()}
-    };
-    obstacleObject["m_health"] = m_health;
-    obstacleObject["m_maxHealth"] = m_maxHealth;
-
-    return obstacleObject;
-
+  return m_health;
 }
 
-double Obstacle::maxHealth() const
+QJsonObject
+Obstacle::createJson ()
 {
-    return m_maxHealth;
+  // Add obstacles to the array
+  QJsonObject obstacleObject;
+  obstacleObject["m_diameter"] = m_diameter;
+  obstacleObject["m_center"]
+      = QJsonObject{ { "x", m_center.x () }, { "y", m_center.y () } };
+  obstacleObject["m_health"] = m_health;
+  obstacleObject["m_maxHealth"] = m_maxHealth;
+
+  return obstacleObject;
 }
 
-void Obstacle::setHealth(double newHealth)
+double
+Obstacle::maxHealth () const
 {
-    m_health = newHealth;
+  return m_maxHealth;
 }
 
-void Obstacle::setMaxHealth(double newMaxHealth)
+void
+Obstacle::setHealth (double newHealth)
 {
-    m_maxHealth = newMaxHealth;
+  m_health = newHealth;
 }
 
-double Obstacle::generateDiameter()
+void
+Obstacle::setMaxHealth (double newMaxHealth)
+{
+  m_maxHealth = newMaxHealth;
+}
+
+double
+Obstacle::generateDiameter ()
 {
 
-    double diameter = QRandomGenerator::global()->generateDouble();
-    int scale = 1 + QRandomGenerator::global()->bounded(10);
-    // 1.5 je minSize
-    diameter = m_minSize + diameter * scale;
+  double diameter = QRandomGenerator::global ()->generateDouble ();
+  int scale = 1 + QRandomGenerator::global ()->bounded (10);
+  // 1.5 je minSize
+  diameter = m_minSize + diameter * scale;
 
-    return diameter;
+  return diameter;
 }
-
-
-

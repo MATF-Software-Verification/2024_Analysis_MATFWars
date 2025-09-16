@@ -1,36 +1,37 @@
 #ifndef CHOOSEDIFFICULTY_H
 #define CHOOSEDIFFICULTY_H
 
-#include <QDialog>
 #include "guessgame.h"
+#include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class ChooseDifficulty;
 }
 
 class ChooseDifficulty : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit ChooseDifficulty(QWidget *parent = nullptr);
-    ~ChooseDifficulty();
+  explicit ChooseDifficulty (QWidget *parent = nullptr);
+  ~ChooseDifficulty ();
 
 signals:
-    void backDifficultyClicked();
+  void backDifficultyClicked ();
 
 private slots:
-    void on_go_difficulty_button_clicked();
-    void on_back_difficulty_button_clicked();
+  void on_go_difficulty_button_clicked ();
+  void on_back_difficulty_button_clicked ();
 
 private:
-    Ui::ChooseDifficulty *ui;
-    GuessGame *ptrGuessGame = nullptr;
-    QString goStyle;
-    QString backStyle;
+  Ui::ChooseDifficulty *ui;
+  GuessGame *ptrGuessGame = nullptr;
+  QString goStyle;
+  QString backStyle;
 
 protected:
-    bool eventFilter(QObject *watched, QEvent *event) override;
+  bool eventFilter (QObject *watched, QEvent *event) override;
 };
 
 #endif // CHOOSEDIFFICULTY_H

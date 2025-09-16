@@ -1,52 +1,48 @@
 #ifndef JOIN_H
 #define JOIN_H
 
-#include <QDialog>
-#include "wargame.h"
 #include "Client.h"
+#include "wargame.h"
+#include <QDialog>
 #include <QMessageBox>
 
-namespace Ui {
+namespace Ui
+{
 class Join;
 }
 
 class Join : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit Join(QWidget *parent = nullptr);
-    ~Join();
-    
-    
-    
-    void popUpShow();
-    
-    void showPopUp();
-    
-signals:
-    void backJoinPop2Clicked();
+  explicit Join (QWidget *parent = nullptr);
+  ~Join ();
 
+  void popUpShow ();
+
+  void showPopUp ();
+
+signals:
+  void backJoinPop2Clicked ();
 
 private slots:
-    void on_back_pop2_button_clicked();
+  void on_back_pop2_button_clicked ();
 
-    void on_join_pop2_button_clicked();
+  void on_join_pop2_button_clicked ();
 
-    void clientReceivedMessage(QString msg);
+  void clientReceivedMessage (QString msg);
 
 private:
-    Ui::Join *ui;
-    WarGame *ptrWarGame = nullptr;
-    Client* m_client;
-    
-    QString backStyle;
-    QString joinStyle;
+  Ui::Join *ui;
+  WarGame *ptrWarGame = nullptr;
+  Client *m_client;
 
+  QString backStyle;
+  QString joinStyle;
 
- protected:
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
+protected:
+  bool eventFilter (QObject *watched, QEvent *event) override;
 };
 
 #endif // JOIN_H

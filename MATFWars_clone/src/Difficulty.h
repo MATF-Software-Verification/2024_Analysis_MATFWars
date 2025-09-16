@@ -3,8 +3,8 @@
 
 enum difficulty
 {
-    easy,
-    hard
+  easy,
+  hard
 };
 
 #endif // DIFFICULTY_H

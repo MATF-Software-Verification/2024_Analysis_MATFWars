@@ -1,60 +1,62 @@
 #include "Player.h"
 
-Player::Player(QString name)
-    : m_name(name)
-{
+Player::Player (QString name) : m_name (name) {}
 
+QString
+Player::name () const
+{
+  return m_name;
 }
 
-QString Player::name() const
+void
+Player::setName (const QString &newName)
 {
-    return m_name;
+  m_name = newName;
 }
 
-void Player::setName(const QString &newName)
+QPointF
+Player::coordinate () const
 {
-    m_name = newName;
+  return m_coordinate;
 }
 
-QPointF Player::coordinate() const
+void
+Player::setCoordinates (QPointF newCoordinates)
 {
-    return m_coordinate;
+  m_coordinate = newCoordinates;
 }
 
-void Player::setCoordinates(QPointF newCoordinates)
+double
+Player::diameter () const
 {
-    m_coordinate = newCoordinates;
+  return m_diameter;
 }
 
-double Player::diameter() const
+void
+Player::flipX ()
 {
-    return m_diameter;
+  m_coordinate.setX (-m_coordinate.x ());
 }
 
-void Player::flipX()
+QJsonObject
+Player::createJson ()
 {
-    m_coordinate.setX(-m_coordinate.x());
+  QJsonObject playerObject;
+  playerObject["m_name"] = m_name;
+  playerObject["m_coordinate"]
+      = QJsonObject{ { "x", m_coordinate.x () }, { "y", m_coordinate.y () } };
+
+  return playerObject;
 }
 
-QJsonObject Player::createJson()
+int
+Player::playerID () const
 {
-    QJsonObject playerObject;
-    playerObject["m_name"] = m_name;
-    playerObject["m_coordinate"] = QJsonObject{
-        {"x", m_coordinate.x()},
-        {"y", m_coordinate.y()}
-    };
-
-    return playerObject;
+  return m_playerID;
 }
 
-int Player::playerID() const
+void
+Player::setPlayerID (int newPlayerID)
 {
-    return m_playerID;
+  m_playerID = newPlayerID;
 }
-
-void Player::setPlayerID(int newPlayerID)
-{
-    m_playerID = newPlayerID;
-}
-

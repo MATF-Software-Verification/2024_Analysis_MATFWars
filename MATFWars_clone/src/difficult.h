@@ -3,20 +3,21 @@
 
 #include <QDialog>
 
-namespace Ui {
+namespace Ui
+{
 class Difficulty;
 }
 
 class Difficulty : public QDialog
 {
-    Q_OBJECT
+  Q_OBJECT
 
 public:
-    explicit Difficulty(QWidget *parent = nullptr);
-    ~Difficulty();
+  explicit Difficulty (QWidget *parent = nullptr);
+  ~Difficulty ();
 
 private:
-    Ui::Difficulty *ui;
+  Ui::Difficulty *ui;
 };
 
 #endif // DIFFICULT_H

@@ -1,36 +1,33 @@
 #include "leaderboard.h"
 #include "ui_leaderboard.h"
 
-Leaderboard::Leaderboard(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::Leaderboard)
+Leaderboard::Leaderboard (QWidget *parent)
+    : QDialog (parent), ui (new Ui::Leaderboard)
 {
-    ui->setupUi(this);
+  ui->setupUi (this);
 }
 
-Leaderboard::~Leaderboard()
+Leaderboard::~Leaderboard () { delete ui; }
+
+void
+Leaderboard::showLeaderboard ()
 {
-    delete ui;
+  QString filePath = QCoreApplication::applicationDirPath ()
+                     + "/../MATFWars/resources/txt/leaderboard.txt";
 
-}
-
-void Leaderboard::showLeaderboard()
-{
-    QString filePath = QCoreApplication::applicationDirPath() + "/../MATFWars/resources/txt/leaderboard.txt";
-
-    QFile file(filePath);
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+  QFile file (filePath);
+  if (file.open (QIODevice::ReadOnly | QIODevice::Text))
     {
-        QTextStream stream(&file);
-        QString fileContent = stream.readAll();
+      QTextStream stream (&file);
+      QString fileContent = stream.readAll ();
 
-        ui->leaderboard_textEdit->setHtml(fileContent);
+      ui->leaderboard_textEdit->setHtml (fileContent);
 
-        file.close();
+      file.close ();
     }
-    else
+  else
     {
-        qDebug() << "Error opening file in showLeaderboard():" << file.errorString();
+      qDebug () << "Error opening file in showLeaderboard():"
+                << file.errorString ();
     }
 }
-
